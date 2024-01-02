@@ -93,21 +93,13 @@ def stop():
     rs.motor_stop(2)
     rs.motor_stop(3)
 
+
 if __name__=="__main__":
     speed = 15
-    tm = 2
+    tm = 1
 
-    
-    
-    forward(speed,tm)
-    leftForward(speed,tm)
-    forward(speed,tm-0.5)
-    left(speed,tm+2)
-    backward(speed,tm)
-    rightBackward(speed,tm)
-    backward(speed,tm-1.5)
-    uTurnR(speed,tm-1.5)
-    rightForward(speed,1)
-
-
-   
+    try:
+        while(1):
+            forward(speed,tm)
+    except:
+        stop()
