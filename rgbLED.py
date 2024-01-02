@@ -28,5 +28,5 @@ for color in colors:
     else:
         rs.set_rgb_led_off(7)
 
-t.sleep(1)
+t.sleep(0.5)
 rs.set_rgb_led_off(7)
