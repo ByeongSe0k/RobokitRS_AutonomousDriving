@@ -1,9 +1,7 @@
 from RobokitRS.RobokitRS import *
 import time as t
+
 rs = RobokitRS()
-
-rs.port_open("COM5")
-
 #(모터 번호,cw-0 ccw-1, speed)
 
 #0번-왼앞 1번-오앞, 2-왼뒤 3-오뒤, 
@@ -95,6 +93,7 @@ def stop():
 
 
 if __name__=="__main__":
+    rs.port_open("COM5")
     speed = 15
     tm = 1
 
