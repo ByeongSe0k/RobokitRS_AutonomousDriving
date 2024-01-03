@@ -99,7 +99,6 @@ if __name__=="__main__":
     tm = 1
 
     try:
-        while(1):
-            forward(speed,tm)
+        forward(speed,tm)
     except:
         stop()
