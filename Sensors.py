@@ -42,85 +42,75 @@ class Motor():
         rs.motor_stop(2)
         rs.motor_stop(3)
      
-    def forward(self,speed,tm):
+    def forward(self,speed):
         rs.motor_write(0,1,speed)
         rs.motor_write(1,0,speed)
         rs.motor_write(2,1,speed)
         rs.motor_write(3,0,speed)
-        t.sleep(tm)
-        self.stop()
+        
 
-    def rightForward(self,speed,tm):
+    def rightForward(self,speed):
         rs.motor_write(0,1,speed)
         rs.motor_write(1,0,0)
         rs.motor_write(2,1,0)
         rs.motor_write(3,0,speed)
-        t.sleep(tm)
-        self.stop()
+        
 
-    def leftForward(self,speed,tm):
+    def leftForward(self,speed):
         rs.motor_write(0,1,0)
         rs.motor_write(1,0,speed)
         rs.motor_write(2,1,speed)
         rs.motor_write(3,0,0)
-        t.sleep(tm)
-        self.stop()
+  
 
-    def backward(self,speed,tm):
+    def backward(self,speed):
         rs.motor_write(0,0,speed)
         rs.motor_write(1,1,speed)
         rs.motor_write(2,0,speed)
         rs.motor_write(3,1,speed)
-        t.sleep(tm)
-        self.stop()
+     
 
-    def rightBackward(self,speed,tm):
+    def rightBackward(self,speed):
         rs.motor_write(0,0,0)
         rs.motor_write(1,1,speed)
         rs.motor_write(2,0,speed)
         rs.motor_write(3,1,0)
-        t.sleep(tm)
-        self.stop()
 
-    def leftBackward(self,speed,tm):
+
+    def leftBackward(self,speed):
         rs.motor_write(0,0,speed)
         rs.motor_write(1,1,0)
         rs.motor_write(2,0,0)
         rs.motor_write(3,1,speed)
-        t.sleep(tm)
-        self.stop()
 
-    def right(self,speed,tm):
+
+    def right(self,speed):
         rs.motor_write(0,1,speed)
         rs.motor_write(1,1,speed)
         rs.motor_write(2,0,speed)
         rs.motor_write(3,0,speed)
-        t.sleep(tm)
-        self.stop()
 
-    def left(self,speed,tm):
+
+    def left(self,speed):
         rs.motor_write(0,0,speed)
         rs.motor_write(1,0,speed)
         rs.motor_write(2,1,speed)
         rs.motor_write(3,1,speed)
-        t.sleep(tm)
-        self.stop()
+     
 
-    def uTurnL(self,speed,tm):
+    def uTurnL(self,speed):
         rs.motor_write(0,0,speed)
         rs.motor_write(1,0,speed)
         rs.motor_write(2,0,speed)
         rs.motor_write(3,0,speed)
-        t.sleep(tm)
-        self.stop()
+    
 
-    def uTurnR(self,speed,tm):
+    def uTurnR(self,speed):
         rs.motor_write(0,1,speed)
         rs.motor_write(1,1,speed)
         rs.motor_write(2,1,speed)
         rs.motor_write(3,1,speed)
-        t.sleep(tm)
-        self.stop()
+      
 
 
 def btn():
@@ -147,9 +137,7 @@ def gyro():
     
 
 def infrared():
-    while(1):
-        sensor1 = rs.analog_read(0)
-        sensor3 = rs.analog_read(1)
-        print(sensor1, sensor3)
-        t.sleep(0.1)
+    sensor1 = rs.analog_read(0)
+    sensor3 = rs.analog_read(1)
+    return sensor1,sensor3
 
