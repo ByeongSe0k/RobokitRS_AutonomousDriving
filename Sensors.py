@@ -1,6 +1,5 @@
 from RobokitRS.RobokitRS import *
 import time as t
-from dataclasses import dataclass
 
 rs = RobokitRS()
 
@@ -122,8 +121,6 @@ class Motor():
         rs.motor_write(3,1,speed)
         t.sleep(tm)
         self.stop()
-
-    
 
 
 def btn():
